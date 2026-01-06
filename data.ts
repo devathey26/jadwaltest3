@@ -1,16 +1,16 @@
-import { ScheduleData, Teacher, Substitute, Picket } from './types';
+import { ScheduleData, Teacher, Substitute, Picket, StudentPicket } from './types';
 
 export const scheduleData: ScheduleData = {
   'SENIN': [
-    { no: '1', time: '07.05 - 07.45', code1: 'B.9.4', subject: 'Animasi-FF', code2: '062', teacher: 'Bella Cintya Devi, S.Kom.' },
-    { no: '2', time: '07.45 - 08.25', code1: 'B.9.4', subject: 'Animasi-FF', code2: '062', teacher: 'Bella Cintya Devi, S.Kom.' },
-    { no: '3', time: '08.25 - 09.05', code1: 'B.1', subject: 'Matematika', code2: '007', teacher: 'A.A Gede Putra Dwi Artajaya, S.Si., M.Kom.' },
-    { no: '4', time: '09.05 - 09.45', code1: 'B.1', subject: 'Matematika', code2: '007', teacher: 'A.A Gede Putra Dwi Artajaya, S.Si., M.Kom.' },
+    { no: '1', time: '07.05 - 07.45', code1: 'B.1', subject: 'Matematika', code2: '079', teacher: 'Ni Putu Linda Agustini, S.Pd.' },
+    { no: '2', time: '07.45 - 08.25', code1: 'B.1', subject: 'Matematika', code2: '079', teacher: 'Ni Putu Linda Agustini, S.Pd.' },
+    { no: '3', time: '08.25 - 09.05', code1: 'B.9.4', subject: 'Animasi-FF', code2: '062', teacher: 'Bella Cintya Devi, S.Kom.' },
+    { no: '4', time: '09.05 - 09.45', code1: 'B.9.4', subject: 'Animasi-FF', code2: '062', teacher: 'Bella Cintya Devi, S.Kom.' },
     { no: '-', time: '09.45 - 10.00', code1: '-', subject: 'ISTIRAHAT', code2: '-', teacher: '-' },
     { no: '5', time: '10.00 - 10.40', code1: 'B.6.4', subject: 'Desain Komunikasi Visual', code2: '076', teacher: 'Triono Doni Wijaya, S.Kom.' },
     { no: '6', time: '10.40 - 11.20', code1: 'B.6.4', subject: 'Desain Komunikasi Visual', code2: '076', teacher: 'Triono Doni Wijaya, S.Kom.' },
     { no: '7', time: '11.20 - 12.00', code1: 'B.6.4', subject: 'Desain Komunikasi Visual', code2: '076', teacher: 'Triono Doni Wijaya, S.Kom.' },
-    { no: '8', time: '12.00 - 12.40', code1: 'B.2', subject: 'Bahasa Inggris', code2: '070', teacher: 'Ni Putu Tirta Purnama Dewi, S.Pd' },
+    { no: '8', time: '12.00 - 12.40', code1: 'B.2', subject: 'Bahasa Inggris', code2: '088', teacher: 'Ni Ketut Supartini, SS.' },
   ],
   'SELASA': [
     { no: '1', time: '07.05 - 07.45', code1: 'B.7', subject: 'Projek Kreatif dan Kewirausahaan', code2: '018', teacher: 'Putu Yenny Suryantari, S.Pd.' },
@@ -24,8 +24,8 @@ export const scheduleData: ScheduleData = {
     { no: '8', time: '12.00 - 12.40', code1: 'B.6.4', subject: 'Desain Komunikasi Visual', code2: '076', teacher: 'Triono Doni Wijaya, S.Kom.' },
   ],
   'RABU': [
-    { no: '1', time: '07.05 - 07.45', code1: 'B.2', subject: 'Bahasa Inggris', code2: '070', teacher: 'Ni Putu Tirta Purnama Dewi, S.Pd' },
-    { no: '2', time: '07.45 - 08.25', code1: 'B.2', subject: 'Bahasa Inggris', code2: '070', teacher: 'Ni Putu Tirta Purnama Dewi, S.Pd' },
+    { no: '1', time: '07.05 - 07.45', code1: 'B.2', subject: 'Bahasa Inggris', code2: '088', teacher: 'Ni Ketut Supartini, SS.' },
+    { no: '2', time: '07.45 - 08.25', code1: 'B.2', subject: 'Bahasa Inggris', code2: '088', teacher: 'Ni Ketut Supartini, SS.' },
     { no: '3', time: '08.25 - 09.05', code1: 'A.3', subject: 'Bahasa Indonesia', code2: '080', teacher: 'Ida Bagus Angga Baskara, S.Pd.' },
     { no: '4', time: '09.05 - 09.45', code1: 'A.3', subject: 'Bahasa Indonesia', code2: '080', teacher: 'Ida Bagus Angga Baskara, S.Pd.' },
     { no: '-', time: '09.45 - 10.00', code1: '-', subject: 'ISTIRAHAT', code2: '-', teacher: '-' },
@@ -72,7 +72,8 @@ export const teacherData: Teacher[] = [
   { code: '081', name: 'Tjok Istri Agung Rai Sintha Devi, S.Pd.', subject: 'Sejarah Indonesia', phone: '6289534767483' },
   { code: '080', name: 'Ida Bagus Angga Baskara, S.Pd.', subject: 'Bahasa Indonesia', phone: '' },
   { code: '007', name: 'A.A Gede Putra Dwi Artajaya, S.Si., M.Kom.', subject: 'Matematika', phone: '6282247033044' },
-  { code: '070', name: 'Ni Putu Tirta Purnama Dewi, S.Pd', subject: 'Bahasa Inggris', phone: '' },
+  { code: '079', name: 'Ni Putu Linda Agustini, S.Pd.', subject: 'Matematika', phone: '6285738235218' },
+  { code: '088', name: 'Ni Ketut Supartini, SS.', subject: 'Bahasa Inggris', phone: '' },
   { code: '076', name: 'Triono Doni Wijaya, S.Kom.', subject: 'Desain Komunikasi Visual', phone: '6287863112233' },
   { code: '018', name: 'Putu Yenny Suryantari, S.Pd.', subject: 'Projek Kreatif dan Kewirausahaan', phone: '6281353285810' },
   { code: '062', name: 'Bella Cintya Devi, S.Kom.', subject: 'Animasi-FF', phone: '6281999022333' },
@@ -80,9 +81,9 @@ export const teacherData: Teacher[] = [
 ];
 
 export const substituteData: Substitute[] = [
-  { code: '079', name: 'Ni Putu Linda Agustini, S.Pd.', subject: 'Matematika', note: 'Menggantikan Bp. A.A Gede Putra' },
-  { code: '088', name: 'Ni Ketut Supartini, SS.', subject: 'Bahasa Inggris', note: 'Menggantikan Ibu Ni Putu Tirta' },
-  { code: '081', name: 'Tjok Istri Agung Rai Sintha Devi, S.Pd.', subject: 'Pendidikan Pancasila', note: 'Menggantikan Ibu Nengah Dwi Rahayu' },
+  { code: '007', name: 'A.A Gede Putra Dwi Artajaya, S.Si., M.Kom.', subject: 'Matematika', note: '' },
+  { code: '070', name: 'Ni Putu Tirta Purnama Dewi, S.Pd', subject: 'Bahasa Inggris', note: '' },
+  { code: '067', name: 'Nengah Dwi Rahayu, SE.', subject: 'Pendidikan Pancasila', note: '' },
 ];
 
 export const picketPagiData: Picket[] = [
@@ -99,4 +100,12 @@ export const picketSoreData: Picket[] = [
   { day: 'Rabu', name: 'Ni Kadek Chandra Putri Irani, S.Pd., M.Pd', phone: '6285953912558' },
   { day: 'Kamis', name: 'Ni Wayan Lina Valentine, S.Pd', phone: '628970147321' },
   { day: 'Jumat', name: 'Kadek Arie Wira Kusuma, S.Kom', phone: '6282247033484' },
+];
+
+export const studentPicketData: StudentPicket[] = [
+  { day: 'Senin', students: ['Adjie', 'Nesta', 'Abil', 'Hardy', 'Jeremy'], coordinator: 'Eca' },
+  { day: 'Selasa', students: ['Stefano', 'Dekda', 'Dewade', 'Keysa', 'Ega'], coordinator: 'Novi' },
+  { day: 'Rabu', students: ['Dafa', 'Rani', 'Irfan', 'Krisna', 'Iqbal'], coordinator: 'Vina' },
+  { day: 'Kamis', students: ['Ryu', 'Randy', 'Ayni', 'Pande', 'Hafiz'], coordinator: 'Aina' },
+  { day: 'Jumat', students: ['Aurel', 'Sutrisna', 'Rangga', 'Rafael', 'Salman'], coordinator: 'Cania' },
 ];

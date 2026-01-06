@@ -31,4 +31,10 @@ export interface Picket {
   phone: string;
 }
 
-export type TabType = 'jadwal' | 'guru' | 'pengganti' | 'piket';
+export interface StudentPicket {
+  day: string;
+  students: string[];
+  coordinator: string;
+}
+
+export type TabType = 'jadwal' | 'piketKelas' | 'guru' | 'pengganti' | 'piket';

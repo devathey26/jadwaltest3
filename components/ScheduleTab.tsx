@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { scheduleData } from '../data';
-import { Clock, User, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
+import { Clock, User, Calendar, ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 import { getIndonesianDay } from '../utils/timeUtils';
 
-export const ScheduleTab: React.FC = () => {
+interface ScheduleTabProps {
+  onNavigateToTeacher?: () => void;
+}
+
+export const ScheduleTab: React.FC<ScheduleTabProps> = ({ onNavigateToTeacher }) => {
   const days = Object.keys(scheduleData);
   const currentDay = getIndonesianDay();
   const [openDay, setOpenDay] = useState<string>(currentDay);
@@ -13,8 +17,14 @@ export const ScheduleTab: React.FC = () => {
   };
 
   return (
-    <div className="space-y-3 pb-20">
-      {days.map((day) => {
+    <div className="pb-20">
+      <h2 className="text-2xl font-heading font-bold text-white mb-6 flex items-center gap-3">
+        <Calendar className="text-accent" size={28} />
+        Jadwal Mingguan
+      </h2>
+
+      <div className="space-y-3">
+        {days.map((day) => {
         const rows = scheduleData[day];
         const isToday = currentDay === day;
         const isOpen = openDay === day;
@@ -86,9 +96,20 @@ export const ScheduleTab: React.FC = () => {
                         </h4>
 
                         {row.teacher !== '-' && (
-                          <div className="flex items-center gap-2 text-sm text-slate-300">
-                            <User size={14} className="text-slate-500" />
-                            <span className="truncate font-medium">{row.teacher}</span>
+                          <div className="flex items-center justify-between gap-2">
+                            <div className="flex items-center gap-2 text-sm text-slate-300">
+                              <User size={14} className="text-slate-500" />
+                              <span className="truncate font-medium">{row.teacher}</span>
+                            </div>
+                            {onNavigateToTeacher && (
+                              <button
+                                onClick={onNavigateToTeacher}
+                                className="p-1.5 rounded-lg bg-accent/10 hover:bg-accent/20 text-accent transition-all shrink-0"
+                                title="Lihat detail guru"
+                              >
+                                <ArrowRight size={14} />
+                              </button>
+                            )}
                           </div>
                         )}
                       </div>
@@ -100,6 +121,7 @@ export const ScheduleTab: React.FC = () => {
           </div>
         );
       })}
+      </div>
     </div>
   );
 };
